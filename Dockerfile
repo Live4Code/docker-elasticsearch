@@ -25,7 +25,7 @@ ADD config/elasticsearch.yml /elasticsearch/config/elasticsearch.yml
 WORKDIR /data
 
 ENV SERVICE_9200_ID elasticsearch
-ENV SERVICE_9200_NAME elasticsearch_master
+ENV SERVICE_9200_NAME elasticsearch-master
 
 
 # Expose ports.
