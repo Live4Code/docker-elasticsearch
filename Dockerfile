@@ -24,9 +24,6 @@ ADD config/elasticsearch.yml /elasticsearch/config/elasticsearch.yml
 # Define working directory.
 WORKDIR /data
 
-# Define default command.
-ENTRYPOINT ["/elasticsearch/bin/elasticsearch", " -Des.config=/elasticsearch/config/elasticsearch.yml"]
-
 ENV SERVICE_9200_ID elasticsearch
 ENV SERVICE_9200_NAME elasticsearch_master
 
@@ -34,3 +31,7 @@ ENV SERVICE_9200_NAME elasticsearch_master
 # Expose ports.
 #   - 9200: HTTP
 EXPOSE 9200
+
+
+# Define default command.
+ENTRYPOINT ["/elasticsearch/bin/elasticsearch", " -Des.config=/elasticsearch/config/elasticsearch.yml"]
